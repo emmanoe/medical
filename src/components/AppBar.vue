@@ -1,9 +1,11 @@
 <template>
-  <div>
+  <div style="margin-left:256px;width:calc(100vw - 256px) !important;height:112px;background-color: #F8F8FF">
+    <div style="margin-top:22px;">
     <v-app-bar
-      color=""
-      height="98px"
-      dark
+      color="#F8F8FF"
+      height="78px"
+      class="mx-auto rounded-xl"
+      style="width:98%;position:relative;"
     >
       <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
@@ -44,5 +46,6 @@
         </v-list>
       </v-menu>
     </v-app-bar>
+    </div>
   </div>
 </template>
