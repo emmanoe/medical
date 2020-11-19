@@ -1,14 +1,13 @@
 <template>
-  <v-app :style="{background: '#F8F8FF'}">
-    <v-row no-gutters>
+<v-row no-gutters>
       <v-col
         v-for="n in (projects.length + 1)"
         :key="n"
         cols="12"
         sm="4"
-        style="padding:8px"
+        style="padding:8px; border: 1px groove"
       >
-        <v-card style="height:200px;padding:8px">
+        <v-card style="height:250px;padding:8px">
           <p style="text-align:center" v-if="n==projects.length + 1">
             <v-icon aria-hidden="false" style="height:24px;width:24px;margin-top: 82px;">
               fa-plus
@@ -16,17 +15,15 @@
           </p>
           <div style="width: 100%; height:100%;" v-else>
             <!-- Title -->
-            <h1 style="width:calc(100% - 24px) !important;float:left;">{{ projects[n - 1].name }}</h1>
-            <v-icon aria-hidden="false" style="height:48px;width:24px;float:left;font-size:1em">
-                fa-ellipsis-v
-              </v-icon>
+            <h1 style="font-size:18px; width:calc(100% ) !important;float:left; color:#777777">{{ projects[n - 1].name }}</h1>
+            
             <!-- Subtitle -->
-            <p>{{ projects[n - 1].subtitle }}</p>
+            <p style="font-size:10px; color:#777777">{{ projects[n - 1].subtitle }}</p>
             <!-- Profils img -->
             <!-- Linear progress bar -->
-            <div style="position:absolute;bottom:0px; width:calc(100% - 16px); height: 50px;border: 1px solid black;border-radius:8px;padding:0 10px 0 10px;">
-              <span>Progression: </span>
-              <span>23.10.20 - 20:15 </span>
+            <div style="position:absolute;bottom:0px; width:calc(100% - 16px); height: 50px;border: 1px groove;border-radius:8px;padding:0 10px 0 10px;">
+              <span style="color:#777777;font-family: 'Roboto', sans-serif;">Progression: </span>
+              <span>23.10.20 - 11.12.20 </span>
               <v-progress-linear
                 color="teal"
                 buffer-value="0"
@@ -38,7 +35,6 @@
         </v-card>
       </v-col>
     </v-row>
-  </v-app>
 </template>
 
 <script>
