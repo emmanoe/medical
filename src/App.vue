@@ -1,12 +1,18 @@
 <template>
-  <v-app>
-    <Navbar />
-    <AppBar />
-    <v-main>
-      <router-view></router-view>
-    </v-main>
-  </v-app>
+  <div style="position:absolute;top:0;left:0;width:100%;height:100vh;overflow:hidden;">
+    <v-app>
+      <Navbar />
+      <AppBar />
+      <v-main style="position:relative;width:100%;height:100vh;overflow:hidden;">
+        <router-view></router-view>
+      </v-main>
+    </v-app>
+  </div>
 </template>
+
+<style>
+  @import './assets/styles/styles.css';
+</style>
 
 <script>
 import AppBar from '@/components/AppBar'
