@@ -20,12 +20,22 @@
               link
             >
               <v-list-item-icon>
-                <v-icon>{{ item.icon }}</v-icon>
+                <v-icon style="position:relative; top:-4px">{{ item.icon }}</v-icon>
               </v-list-item-icon>
+                <v-list-item-content>
+                  <v-list-item-title>{{ item.title }}</v-list-item-title>
 
-              <v-list-item-content>
-                <v-list-item-title>{{ item.title }}</v-list-item-title>
+                  <v-list-item 
+                    style="position:relative; left:-15px"
+                    v-for="(title,i) in item.subtitles"
+                    :key="i"
+                    link
+                  >
+                <v-list-item-title style="color:grey" v-text="title"></v-list-item-title>
+              </v-list-item>
+
               </v-list-item-content>
+
             </v-list-item>
           </v-list>
         </div>
@@ -39,9 +49,9 @@
       return {
         drawer: true,
         items: [
-          { title: 'Menu', icon: 'mdi-menu' },
-          { title: 'Projets', icon: 'mdi-briefcase' },
-          { title: 'Gestion des tests', icon: 'mdi-test-tube' },
+          { title: 'Menu', icon: 'mdi-menu', subtitles: ["Home", "Mes tâches", "Notifications"] },
+          { title: 'Projets', icon: 'mdi-briefcase', subtitles: [] },
+          { title: 'Gestion des tests', icon: 'mdi-test-tube',subtitles: [] },
         ],
         mini: false,
       }
