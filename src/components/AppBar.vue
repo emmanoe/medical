@@ -1,26 +1,18 @@
 <template>
-  <div style="margin-left:256px;width:calc(100vw - 256px) !important;height:112px;background-color: #F8F8FF">
-    <div style="margin-top:22px;">
+  <div>
     <v-app-bar
+      app
       color="#FFFFFF"
-      height="78px"
-      class="mx-auto rounded-xl"
-      style="width:98%;position:relative;"
+      height="95px"
+      rounded
+      flat
     >
       <v-btn icon>
         <v-icon>mdi-magnify</v-icon>
       </v-btn>
       <v-autocomplete
-
-      v-model="select"
-      :loading="loading"
-      :items="items"
-      :search-input.sync="search"
-      cache-items
       class="mx-auto rounded-xl"
       flat
-      hide-no-data
-      hide-details
       label="Rechercher ..."
       solo-inverted
     ></v-autocomplete>
@@ -42,6 +34,5 @@
       >
       </v-avatar>
     </v-app-bar>
-    </div>
   </div>
 </template>
